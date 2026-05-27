@@ -40,10 +40,13 @@ This website is styled directly using the clinic's official branding assets (Nav
 Sushila dental clinic/
 ├── assets/
 │   ├── logo.png       # Branded clinic logo (Navy & Orange roundel)
-│   └── hero-bg.png    # Premium clinic interior hero background
-├── index.html         # Main entry point (HTML Structure & Local Schema)
-├── style.css          # Design System stylesheet (Variables, Responsive grid)
-├── main.js           # Scroll triggers, Validation checks, and Testimonial logic
+│   ├── hero-bg.png    # Premium clinic interior hero background
+│   ├── doctor.png     # Professional portrait of Dr. Shailendra Kumar
+│   └── gallery1-8.png # 8 high-resolution clinic gallery photos
+├── index.html         # Main entry point (HTML structure, schema & 6-photo grid)
+├── gallery.html       # Standalone gallery subpage (displaying all 8 photos)
+├── style.css          # Design System stylesheet (Variables, grids, responsive layouts)
+├── main.js           # Scroll triggers, Carousel slider, and Form validation
 └── README.md          # Project documentation
 ```
 

@@ -70,6 +70,8 @@
 </head>
 <body>
 
+    <div class="scroll-progress-container"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
+
     <!-- Header Navigation -->
     <header class="main-header">
         <div class="container nav-container">
@@ -91,6 +93,23 @@
 
             <div class="nav-actions">
                 <a href="#contact" class="btn btn-primary btn-sm">Book Appointment</a>
+                <a href="index-hi.html" class="lang-switch-btn" title="हिन्दी में अनुवाद करें">हिन्दी</a>
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
                 <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
@@ -103,6 +122,14 @@
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-bg-overlay"></div>
+        <div class="hero-shapes">
+            <!-- SVG Silhouette 1: Tooth -->
+            <svg class="floating-shape floating-shape-1" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.6.8 3 2.1 3.9C9 11.5 8 13.5 8 15.5c0 2.5 1.5 4.5 3.5 5 1.5.4 3 0 4-1 1 1 2.5 1.4 4 1 2-.5 3.5-2.5 3.5-5 0-2-1-4-1.6-5.1 1.3-.9 2.1-2.3 2.1-3.9C20.5 4 18.5 2 16 2h-4zm-4 4.5c0-1.4 1.1-2.5 2.5-2.5S13 5.1 13 6.5s-1.1 2.5-2.5 2.5S8 7.9 8 6.5zm8-2.5c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/></svg>
+            <!-- SVG Silhouette 2: Dental Cross -->
+            <svg class="floating-shape floating-shape-2" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M19 10.5h-5.5V5c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5v5.5H5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h5.5V19c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5v-5.5H19c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5z"/></svg>
+            <!-- SVG Silhouette 3: Tooth -->
+            <svg class="floating-shape floating-shape-3" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.6.8 3 2.1 3.9C9 11.5 8 13.5 8 15.5c0 2.5 1.5 4.5 3.5 5 1.5.4 3 0 4-1 1 1 2.5 1.4 4 1 2-.5 3.5-2.5 3.5-5 0-2-1-4-1.6-5.1 1.3-.9 2.1-2.3 2.1-3.9C20.5 4 18.5 2 16 2h-4zm-4 4.5c0-1.4 1.1-2.5 2.5-2.5S13 5.1 13 6.5s-1.1 2.5-2.5 2.5S8 7.9 8 6.5zm8-2.5c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/></svg>
+        </div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="tagline-badge">
@@ -451,6 +478,253 @@
                     <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous Review">←</button>
                     <div class="slider-dots" id="sliderDots"></div>
                     <button class="slider-btn next-btn" id="nextBtn" aria-label="Next Review">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptom Checker Section -->
+    <section id="symptoms" class="symptom-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">DIAGNOSTIC WIZARD</span>
+                <h2>Interactive Symptom Checker</h2>
+                <p>Experiencing dental discomfort? Select your primary symptom below to see the recommended treatment and auto-fill our booking form.</p>
+            </div>
+            
+            <div class="symptom-grid-layout animate-scroll">
+                <!-- Symptom Selector Cards Grid -->
+                <div class="symptom-cards-grid">
+                    <div class="symptom-card" data-symptom="toothache">
+                        <span class="symptom-card-icon">🦷</span>
+                        <h4>Toothache & Cavity</h4>
+                        <p>Sharp pain, sensitivity to hot/cold, throbbing ache</p>
+                    </div>
+                    <div class="symptom-card" data-symptom="crooked">
+                        <span class="symptom-card-icon">😬</span>
+                        <h4>Crooked Teeth</h4>
+                        <p>Misaligned teeth, crowding, gaps, bite issues</p>
+                    </div>
+                    <div class="symptom-card" data-symptom="missing">
+                        <span class="symptom-card-icon">👑</span>
+                        <h4>Missing & Broken</h4>
+                        <p>Fractured enamel, missing molar, chipped tooth</p>
+                    </div>
+                    <div class="symptom-card" data-symptom="stained">
+                        <span class="symptom-card-icon">✨</span>
+                        <h4>Stained / Yellow</h4>
+                        <p>Discoloration, coffee/tea stains, plaque buildup</p>
+                    </div>
+                    <div class="symptom-card" data-symptom="bleeding">
+                        <span class="symptom-card-icon">🩸</span>
+                        <h4>Bleeding Gums</h4>
+                        <p>Swollen gums, bleeding during brushing, bad breath</p>
+                    </div>
+                    <div class="symptom-card" data-symptom="emergency">
+                        <span class="symptom-card-icon">🚨</span>
+                        <h4>Dental Emergency</h4>
+                        <p>Severe trauma, knocked-out tooth, unbearable pain</p>
+                    </div>
+                </div>
+                
+                <!-- Recommendation Advice Panel -->
+                <div class="symptom-advice-panel">
+                    <div class="advice-placeholder" id="advicePlaceholder">
+                        <div class="advice-placeholder-icon">💡</div>
+                        <h3>Select a Symptom</h3>
+                        <p>Click on any symptom card on the left to view immediate guidelines, treatment recommendations, and auto-populate your appointment form.</p>
+                    </div>
+                    
+                    <!-- Content populated or toggled via JS -->
+                    <div class="advice-content" id="advice-toothache">
+                        <span class="advice-tag">Suggested: RCT or Filling</span>
+                        <h3>Severe Toothache / Deep Cavity</h3>
+                        <p class="advice-text">Persistent, throbbing pain or sharp reaction to cold/hot liquids often points to bacterial decay reaching the inner tooth nerve. This requires timely treatment to prevent serious infections or abscesses.</p>
+                        <div class="advice-tips">
+                            <h5>Immediate Self-Care Tips:</h5>
+                            <ul>
+                                <li>Rinse your mouth with warm salt water.</li>
+                                <li>Avoid chewing on the painful side.</li>
+                                <li>Book a dental examination as soon as possible.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="rct" data-desc="I am experiencing persistent toothache and hot/cold sensitivity. I would like to check for cavities and discuss a potential Root Canal Treatment (RCT) or dental fillings.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                    
+                    <div class="advice-content" id="advice-crooked">
+                        <span class="advice-tag">Suggested: Orthodontics Braces</span>
+                        <h3>Teeth Alignment & Crowding</h3>
+                        <p class="advice-text">Misaligned teeth, overcrowding, or gap issues are highly common and can cause plaque accumulation, uneven tooth wear, and chewing difficulties. Braces or aligners help achieve a balanced bite.</p>
+                        <div class="advice-tips">
+                            <h5>Immediate Self-Care Tips:</h5>
+                            <ul>
+                                <li>Use dental floss regularly to clean tight gaps.</li>
+                                <li>Avoid opening bottles or hard objects with your teeth.</li>
+                                <li>Schedule an orthodontic checkup to explore braces options.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="braces" data-desc="I would like to schedule an orthodontic consultation to discuss teeth straightening, dental braces, or alignment solutions for crooked teeth/gaps.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                    
+                    <div class="advice-content" id="advice-missing">
+                        <span class="advice-tag">Suggested: Ceramic Crowns / Bridges</span>
+                        <h3>Chipped, Missing or Broken Teeth</h3>
+                        <p class="advice-text">A broken, chipped, or missing tooth compromises your chewing efficiency and causes neighboring teeth to drift. Custom ceramic crowns or bridges restore function and aesthetic symmetry.</p>
+                        <div class="advice-tips">
+                            <h5>Immediate Self-Care Tips:</h5>
+                            <ul>
+                                <li>Keep the area clean by gentle rinsing.</li>
+                                <li>If a tooth chipped recently, try to locate and save the fragment.</li>
+                                <li>Schedule a crown/bridge restoration consultation.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="crown" data-desc="I am looking to restore a chipped, broken, or missing tooth. I want to consult on dental crowns, caps, or bridges.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                    
+                    <div class="advice-content" id="advice-stained">
+                        <span class="advice-tag">Suggested: Scaling & Cleaning</span>
+                        <h3>Yellowing, Stains or Plaque</h3>
+                        <p class="advice-text">Stains from food, tea, or smoking, alongside tartar accumulation, can lead to gum infections and enamel decay. Professional scaling and polishing safely restores your natural brightness.</p>
+                        <div class="advice-tips">
+                            <h5>Immediate Self-Care Tips:</h5>
+                            <ul>
+                                <li>Brush twice daily with a soft-bristled brush.</li>
+                                <li>Rinse with water immediately after drinking coffee or tea.</li>
+                                <li>Get a professional scaling and teeth cleaning done twice a year.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="cleaning" data-desc="I want to book an appointment for professional scaling, polishing, and teeth cleaning to remove stains and tartar.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                    
+                    <div class="advice-content" id="advice-bleeding">
+                        <span class="advice-tag">Suggested: Periodontal / Gum Care</span>
+                        <h3>Bleeding Gums & Bad Breath</h3>
+                        <p class="advice-text">Bleeding gums during brushing or persistent bad breath are signs of gingivitis (gum inflammation). If ignored, plaque hardens below the gumline and can lead to tooth loosening.</p>
+                        <div class="advice-tips">
+                            <h5>Immediate Self-Care Tips:</h5>
+                            <ul>
+                                <li>Floss daily to remove interdental plaque.</li>
+                                <li>Use a mild antiseptic mouthwash.</li>
+                                <li>Schedule a cleaning and gum checkup immediately.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="prosthetic" data-desc="I am experiencing swollen/bleeding gums or bad breath, and would like a thorough periodontal checkup and gum care appointment.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                    
+                    <div class="advice-content" id="advice-emergency">
+                        <span class="advice-tag">Suggested: Emergency Care</span>
+                        <h3>Acute Pain or Dental Trauma</h3>
+                        <p class="advice-text">Severe, unbearable toothache, facial swelling, or a knocked-out tooth from physical trauma are clinical emergencies. Quick attention can save a tooth and prevent serious systemic infections.</p>
+                        <div class="advice-tips">
+                            <h5>Emergency Instructions:</h5>
+                            <ul>
+                                <li>If a tooth is knocked out, keep it moist (in milk or saliva) and seek care within 1 hour.</li>
+                                <li>Apply a cold compress outside the cheek to reduce swelling.</li>
+                                <li>Contact the clinic immediately for an urgent slot.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-block apply-symptom-btn" data-service="other" data-desc="EMERGENCY DENTAL REQUEST: I have severe, acute pain / dental trauma and need immediate medical relief or extraction.">
+                            Auto-fill Booking Form
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">COMMON PATIENT QUERIES</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions about treatments, pain management, or booking procedures? We have compiled direct answers for you.</p>
+            </div>
+            
+            <div class="faq-container animate-scroll">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Is root canal treatment (RCT) painful?</h3>
+                        <div class="faq-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            No, modern Root Canal Treatments are virtually pain-free. We use advanced local anesthesia to completely numb the tooth and surrounding area before the procedure. Most patients report that the procedure feels no different than getting a standard deep filling, and it immediately relieves the severe toothache caused by the infection.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">How long does teeth straightening (braces) treatment take?</h3>
+                        <div class="faq-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            The duration of orthodontic treatment varies depending on the severity of misalignment, crowding, or gaps. On average, active treatment with dental braces or clear aligners takes between 12 to 24 months. During this time, you will visit the clinic once every 4 to 6 weeks for adjustments and progress monitoring.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">What sterilization protocols do you follow?</h3>
+                        <div class="faq-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            Patient safety is our absolute priority. We strictly follow WHO and IDA sterilization guidelines. All reusable dental instruments undergo a rigorous 4-step process: chemical pre-disinfection, ultrasonic cleaning, pouching, and high-pressure steam sterilization in a medical-grade autoclave. Single-use items are discarded immediately, and treatment chairs are sanitized after every patient.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Do I need to book an appointment in advance?</h3>
+                        <div class="faq-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            While we do accommodate walk-in patients when slots are free, we highly recommend booking an appointment in advance. Scheduling your visit ensures minimal waiting times and allows Dr. Shailendra Kumar to dedicate full, uninterrupted time to your diagnosis and treatment. You can use our online form or call us to reserve a slot.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">What should I do in case of a dental emergency?</h3>
+                        <div class="faq-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            In case of a dental emergency (such as a knocked-out tooth, severe jaw trauma, facial swelling, or bleeding), contact the clinic immediately. If a tooth is knocked out, handle it only by the crown (top part), rinse it gently without scrubbing, and place it in a container of cold milk or clean saliva. Seek emergency dental care within 60 minutes for the highest chance of saving the tooth.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

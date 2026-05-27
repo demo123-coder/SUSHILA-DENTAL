@@ -25,6 +25,8 @@
 </head>
 <body class="gallery-subpage">
 
+    <div class="scroll-progress-container"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
+
     <!-- Header Navigation -->
     <header class="main-header scrolled">
         <div class="container nav-container">
@@ -46,6 +48,23 @@
 
             <div class="nav-actions">
                 <a href="index.html#contact" class="btn btn-primary btn-sm">Book Appointment</a>
+                <a href="gallery-hi.html" class="lang-switch-btn" title="हिन्दी में अनुवाद करें">हिन्दी</a>
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
                 <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
